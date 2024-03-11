@@ -1,0 +1,205 @@
+/*- Soft blue: hsl(215, 51%, 70%)
+- Cyan: hsl(178, 100%, 50%)
+
+### Neutral
+
+- Very dark blue (main BG): hsl(217, 54%, 11%)
+- Very dark blue (card BG): hsl(216, 50%, 16%)
+- Very dark blue (line): hsl(215, 32%, 27%)
+- White: hsl(0, 0%, 100%)
+*/
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Roboto:wght@400;500;700&display=swap');
+
+html {
+	background-color: hsl(217, 54%, 11%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+
+	flex-direction: column;
+
+	justify-content: center;
+	align-items: center;
+
+	min-height: 100vh;
+
+	font-family: 'Outfit', Arial;
+}
+
+p {
+	font-size: 18px;
+}
+
+.nft-preview {
+	background-color: hsl(216, 50%, 16%);
+
+	padding: 1.5rem;
+
+	width: 348px;
+
+	border-radius: 20px;
+}
+
+.nft-image {
+	display: block;
+
+	width: 300px;
+	height: 300px;
+
+	border-radius: 10px;
+
+	margin-bottom: 1.2rem;
+
+	transition: 0.3s;
+
+}
+
+.view-hover {
+    position: relative;
+
+    border-radius: 10px;
+
+    margin-bottom: 1rem;
+
+    width: 300px;
+    height: 300px;
+
+    overflow: hidden;
+  }
+
+  .overlay {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: hsl(178, 100%, 50%, 0.35);
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+  }
+
+  .view-hover:hover .overlay {
+    opacity: 1;
+  }
+
+  .overlay img {
+    width: 40px; 
+    height: 40px; 
+    transition: transform 0.3s ease;
+  }
+
+  .view-hover:hover .overlay img {
+    transform: scale(1.2);
+  }
+
+h2 {
+	color: #fff;
+
+	font-weight: 600;
+
+	margin-bottom: 1.2rem;
+
+	transition: 0.3s;
+}
+h2:hover {
+	color: hsl(178, 100%, 50%);
+}
+
+.nft-description {
+	color: hsl(215, 32%, 60%);
+
+	font-weight: 300;
+
+	margin-bottom: 1.2rem;
+}
+
+.nft-information-container {
+	display: flex;
+
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	margin-bottom: 1.2rem;
+}
+
+.wallet {
+	display: flex;
+
+	flex-direction: row;
+	align-items: center;
+
+	column-gap: 10px;
+}
+.wallet-amount {
+	color: hsl(178, 100%, 50%);
+
+	font-weight: 600;
+}
+
+.release-date {
+	display: flex;
+
+	flex-direction: row;
+	align-items: center;
+
+	column-gap: 10px;
+}
+.time-remaining {
+	color: hsl(215, 32%, 60%);
+}
+
+hr {
+	border-color:  hsl(215, 32%, 60%);
+
+	margin-bottom: 1rem;
+}
+
+.creator {
+	display: flex;
+
+	flex-direction: row;
+
+	align-items: center;
+
+	column-gap: 10px;
+
+	font-weight: 300px;
+
+	margin-bottom: 1rem;
+}
+.avatar-image {
+	border: 1px solid white;
+	border-radius: 50%;
+
+	width: 30px;
+}
+.creator p {
+	color: white;
+
+	transition: 0.3s;
+}
+.creator p:hover {
+	color: hsl(178, 100%, 50%);
+}
+.creator span {
+	color: hsl(215, 32%, 60%);
+}
+.attribution { font-size: 11px; text-align: center; color: white;}
+.attribution a { color: hsl(228, 45%, 44%); }
